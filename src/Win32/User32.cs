@@ -1,7 +1,8 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace WinMessageSender.Shell
+namespace WinMessageSender.Win32
 {
+    [ComVisible(false)]
     public sealed class User32
     {
         // P/Invoke constants

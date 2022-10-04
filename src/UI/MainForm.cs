@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using WinMessageSender.Helpers;
-using WinMessageSender.Shell;
+using WinMessageSender.Win32;
 
 namespace WinMessageSender.UI
 {

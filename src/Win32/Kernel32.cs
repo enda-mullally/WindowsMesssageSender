@@ -4,8 +4,9 @@ using System.Text;
 
 // ReSharper disable InconsistentNaming
 
-namespace WinMessageSender.Shell
+namespace WinMessageSender.Win32
 {
+    [ComVisible(false)]
     public sealed class Kernel32
     {
         [Flags]
