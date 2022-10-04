@@ -4,13 +4,13 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("WinMessageSender")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Windows Message Sender")]
+[assembly: AssemblyDescription("Windows Message Sender")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("WinMessageSender")]
-[assembly: AssemblyCopyright("Copyright ©  2022")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCompany("Enda Mullally")]
+[assembly: AssemblyProduct("Windows Message Sender")]
+[assembly: AssemblyCopyright("Copyright ©  2022 Enda Mullally")]
+[assembly: AssemblyTrademark("Enda Mullally")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible

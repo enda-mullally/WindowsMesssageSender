@@ -4,7 +4,7 @@ using System.Windows.Forms;
 using WinMessageSender.Helpers;
 using WinMessageSender.Shell;
 
-namespace WinMessageSender
+namespace WinMessageSender.UI
 {
     public partial class MainForm : Form
     {
@@ -21,6 +21,7 @@ namespace WinMessageSender
         }
 
         // ReSharper disable once IdentifierTypo
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Custom")]
         private void uxbtnSend_Click(object sender, EventArgs e)
         {
             var handle = IntParser.ParseInt32(uxtxtHandle.Text);
@@ -42,13 +43,15 @@ namespace WinMessageSender
                     // PostMessage
                     result = User32.PostMessage(handle, message, wParam, lParam).ToString();
                     lastError = Marshal.GetLastWin32Error();
-                    
+
                     break;
                 }
                 case 1:
                 {
                     // SendMessage
                     result = User32.SendMessage(handle, message, wParam, lParam).ToString();
+                    lastError = Marshal.GetLastWin32Error();
+
                     break;
                 }
             }
@@ -65,6 +68,8 @@ namespace WinMessageSender
             uxlblResult.Text += $@", GetLastError() = {lastError}, {Kernel32.GetLastErrorString(lastError)}";
         }
 
+        // ReSharper disable once IdentifierTypo
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Custom")]
         private void uxtxtMessage_TextChanged(object sender, EventArgs e)
         {
             uxbtnSend.Enabled = uxtxtMessage.Text.Trim().Length > 0 &&

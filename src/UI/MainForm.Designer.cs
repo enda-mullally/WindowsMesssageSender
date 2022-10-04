@@ -1,4 +1,4 @@
-﻿namespace WinMessageSender
+﻿namespace WinMessageSender.UI
 {
     partial class MainForm
     {
